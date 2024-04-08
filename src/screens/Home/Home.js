@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import Buscador from "../../components/Buscador/Buscador"
 
 
 class Home extends Component {
@@ -12,6 +12,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
+    console.log("props Home", this.props)
     fetch("https://api.themoviedb.org/3/movie/popular?api_key=b0c989c37b55d3ea4a70eda0aeea1b02")
       .then(res => res.json())
       .then(data => this.setState({
@@ -31,7 +32,9 @@ class Home extends Component {
   render() {
     return (
       <div>
-
+        <Buscador
+        history={this.props.history}
+        />      
       </div>
     )
   }

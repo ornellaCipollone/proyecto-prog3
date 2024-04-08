@@ -21,7 +21,8 @@ function App() {
     <Link to="/">Home</Link>
 
     <Switch>
-      <Route path="/" component={Home} />
+      <Route exact path="/" component={Home} />
+      <Route path="/resultados/:busqueda" component={Resultados} />
       <Route component= {Error404} />
     </Switch>
 
