@@ -22,6 +22,7 @@ function App() {
 
     <Switch>
       <Route path="/" component={Home} />
+      <Route component= {Error404} />
     </Switch>
 
    </div>
