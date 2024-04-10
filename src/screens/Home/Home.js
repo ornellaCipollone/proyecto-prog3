@@ -30,12 +30,14 @@ class Home extends Component {
 
 
   render() {
+    console.log (this.setState.populars)
+    console.log (this.setState.topRated)
     return (
-      <div>
+      <React.Fragment>
         <Buscador
         history={this.props.history}
         />      
-      </div>
+      </React.Fragment>
     )
   }
 }
