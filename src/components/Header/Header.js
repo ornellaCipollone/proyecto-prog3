@@ -1,9 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react';
+ function Header(props){
+  return(
+    <header>
+      <nav>
+        <ul>
+          <li>HOME</li>
+          <li>FAVORITE</li>
+          <li>POPULARS</li>
+          <li>TOP RATED</li>
+        </ul>
+      </nav>
+    </header>
+  )
+ }
 
-export default class Header extends Component {
-  render() {
-    return (
-      <div>Header</div>
-    )
-  }
-}
