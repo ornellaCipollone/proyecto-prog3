@@ -1,9 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Footer extends Component {
-  render() {
-    return (
-      <div>Footer</div>
-    )
-  }
+function Footer(){
+  return(
+    <footer>
+      <h4>Copyrigh 2024. Todos los derechos son reservados. Hecho por: Lara Manfredini, Ornella Cipollone y Tom Brody</h4>
+  
+    </footer>
+  )
 }
+export default Footer;

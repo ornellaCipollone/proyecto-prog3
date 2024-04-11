@@ -30,13 +30,24 @@ class Home extends Component {
 
 
   render() {
-    console.log (this.setState.populars)
-    console.log (this.setState.topRated)
+    console.log(this.setState.populars)
+    console.log(this.setState.topRated)
     return (
       <React.Fragment>
         <Buscador
-        history={this.props.history}
-        />      
+          history={this.props.history}
+        />
+        {
+          this.state.populars.length > 0 ?
+            <section>
+              {
+                this.state.populars.slice(0, 6).map(
+                // (peli, idx) => <Tarjeta key={peli + idx} datosPeli={peli} />
+                )
+              }
+            </section> :
+            <h3> Loading...</h3>
+        }
       </React.Fragment>
     )
   }
