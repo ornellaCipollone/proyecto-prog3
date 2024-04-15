@@ -1,0 +1,63 @@
+.not-found-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.not-found-title {
+    font-size: 6rem;
+    margin-bottom: 20px;
+    color: #3498db;
+}
+
+.not-found-message {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #3498db, #9b59b6, #e74c3c, #f39c12);
+    background-size: 400% 400%;
+    animation: gradientAnimation 6s ease infinite;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.not-found-link {
+    font-size: 1.2rem;
+    color: #3498db;
+    text-decoration: none;
+    border: 2px solid #3498db;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.not-found-link:hover {
+    background-color: #3498db;
+    color: #fff;
+}

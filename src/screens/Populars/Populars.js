@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Filtro from "../../components/Filtro/Filtro";
+import Pelicula from "../../components/Pelicula/Pelicula"
+import Loader from "../../components/Loader/Loader"
 
 class Populars extends Component {
   constructor() {
@@ -12,7 +14,7 @@ class Populars extends Component {
 
   componentDidMount() {
     fetch(
-      `https://api.themoviedb.org/3/movie/top_rated?api_key=b0c989c37b55d3ea4a70eda0aeea1b02&page=${this.state.page}`
+      `https://api.themoviedb.org/3/movie/popular?api_key=b0c989c37b55d3ea4a70eda0aeea1b02&page=${this.state.page}`
     )
       .then((res) => res.json())
       .then((data) =>
@@ -51,14 +53,14 @@ class Populars extends Component {
     return (
       <React.Fragment>
         <Filtro
-          filtrarPelis={(valorInput) => this.filtrarPopulars(valorInput)}
+          filtrarPelis={(valorInput) => this.filtrarPopulares(valorInput)}
         />
         {this.state.populars.length > 0 ? (
           this.state.populars.map((pelicula, idx) => (
             <Pelicula key={pelicula + idx} datosPelicula={pelicula} />
           ))
         ) : (
-          <h3> Loading...</h3>
+          <Loader/>
         )}
         <button onClick={() => this.traerMas(this.state.populars)}>
           Ver más
