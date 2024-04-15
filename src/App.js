@@ -23,6 +23,7 @@ function App() {
           <Route path="/" exact={true} component={Home} />
           <Route path="/favoritos" component={Favoritos} />
           <Route path="/resultados/:busqueda" component={Resultados} />
+          <Route path="/detail/id/:id" component={Detail}/>
           <Route path="" component={Error404} />
         </Switch>
       </main>
