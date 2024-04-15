@@ -20,17 +20,21 @@ import
 
 function App() {
   return (
-   <div>
-    <Link to="/">Home</Link>
-    
+    <body>
+    <Header/>
+    <main>
 
     <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/resultados/:busqueda" component={Resultados} />
-      <Route component= {Error404} />
+    <Route path="/" exact={true} component={Home} />
+    <Route path="/favoritos" component={Favoritos} />
+    <Route path="/popular" component={Popular} />
+    <Route path="/upcoming" component={Upcoming} />
+    <Route path= "" component={Error404} />
     </Switch>
 
-   </div>
+    </main>
+    <Footer/>
+    </body>
   );
 }
 

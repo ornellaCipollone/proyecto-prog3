@@ -21,10 +21,33 @@ class Favoritos extends Component{
                 .then(favs => { peliculasLista.push(favs);
                     this.setState({favoritas:pelisLista})
                 })
-            }
+            })
 
-            )
             }
         }
+        render(){
+            console.log(this.state);
+            return(
+                <React.Fragment>
+                {
+                    this.state.favoritas.length > 0 ?
+                <section className="contenedor">
+                    <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i className="icon-angle-left"></i></button>
+                    <article className="contenedor-peliculas">
+                    <h2 className="titulo tituloFavs">Selección de películas favoritas</h2>
+                        <div className="galeria">{
+                            this.state.favoritas.map(
+                                (peliFav, idx) => <Pelis key={peliFav + idx} datosPop={peliFav}/>
+                            )
+                        }
+                        </div>
+                    </article>
+                    <button role="boton" id="flecha-derecha" className="flecha-derecha"><i className="icon-angle-right"></i></button>
+                </section>: 
+                <h3 className="loading">Loading...</h3>}
+        
+                </React.Fragment>
+            )}
     }
        
+    export default Favoritos
