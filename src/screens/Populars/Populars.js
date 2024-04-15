@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class populars extends Component {
+class Populars extends Component {
     constructor() {
         super()
         this.state = {
@@ -18,3 +18,4 @@ class populars extends Component {
             .catch(error => console.log(error))
     }
 }
+export default Populars
