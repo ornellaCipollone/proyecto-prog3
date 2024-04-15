@@ -43,16 +43,16 @@ class Home extends Component {
     console.log(this.setState.populars);
     console.log(this.setState.topRated);
     return (
-      <React.Fragment>
+      <React.Fragment className="home-container">
         <Buscador history={this.props.history} />
 
         {this.state.populars.length > 0 ? (
-          <section>
+          <section c> 
             <h2>
-              <Link to="/populars">Populars Movies</Link>
+              <Link to="/populars" className="home-link">Populars Movies</Link>
             </h2>
             {this.state.populars.slice(0, 6).map((pelicula, idx) => (
-              <Pelicula key={pelicula + idx} datosPelicula={pelicula} />
+              <Pelicula key={pelicula + idx} datosPelicula={pelicula} className="movie-card" />
             ))}
           </section>
         ) : (
@@ -62,9 +62,9 @@ class Home extends Component {
           <Link to="/toprated">Top Rated Movies</Link>
         </h2>
         {this.state.topRated.length > 0 ? (
-          <section>
+          <section className="movie-section">
             {this.state.topRated.slice(0, 6).map((pelicula, idx) => (
-              <Pelicula key={pelicula + idx} datosPelicula={pelicula} />
+              <Pelicula key={pelicula + idx} datosPelicula={pelicula} className="movie-card" />
             ))}
           </section>
         ) : (

@@ -39,7 +39,7 @@ class Favoritos extends Component{
                     <h2 className="titulo tituloFavs">Selección de películas favoritas</h2>
                         <div className="galeria">{
                             this.state.favoritas.map(
-                                (peliFav, idx) => <Pelicula key={peliFav + idx} datosPop={peliFav}/>
+                                (peliFav, idx) => <Pelicula key={peliFav + idx} datosPelicula={peliFav}/>
                             )
                         }
                         </div>
