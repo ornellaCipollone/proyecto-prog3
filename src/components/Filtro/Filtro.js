@@ -28,7 +28,6 @@ class Filtro extends Component {
                 onChange={(event) => this.capturarValor(event)}
                 value={this.state.valorInput}
               />
-              <input type="submit" value="Submit" />
             </form>
           </div>
         );

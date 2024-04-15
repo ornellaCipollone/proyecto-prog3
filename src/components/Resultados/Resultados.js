@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import Pelicula from "../../components/Pelicula/Pelicula"
+import Loader from "../../components/Loader/Loader"
+
 
 class Resultados extends Component {
   constructor() {
@@ -33,7 +36,7 @@ class Resultados extends Component {
             </div>
           </section>
         ) : (
-          <h3>Loading...</h3>
+          <Loader/>
         )}
       </React.Fragment>
     );
