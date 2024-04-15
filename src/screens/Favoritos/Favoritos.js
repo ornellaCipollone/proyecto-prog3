@@ -1,7 +1,8 @@
 import React, {Component} from "react"
+import Pelicula from "../../components/Pelicula/Pelicula";
 
 class Favoritos extends Component{
-    /* constructor(props){
+     constructor(props){
         super(props);
         this.state = {
             favoritas: []
@@ -13,23 +14,24 @@ class Favoritos extends Component{
             if (recuperoStoragePeliculas !== null){
                 let pelisArray= JSON.parse(recuperoStoragePeliculas)
                 favs= pelisArray 
-                peliculasLista = []
+                let  peliculasLista = []
 
             favs.forEach((id) => {
                 fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=b0c989c37b55d3ea4a70eda0aeea1b02`)
                 .then(response => response.json())
                 .then(favs => { peliculasLista.push(favs);
-                    this.setState({favoritas:pelisLista})
+                    this.setState({favoritas:peliculasLista})
                 })
             })
 
             }
         }
-     */    render(){
+
+        render(){
             console.log(this.state);
             return(
                 <React.Fragment>
-                {/* {
+                {
                     this.state.favoritas.length > 0 ?
                 <section className="contenedor">
                     <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i className="icon-angle-left"></i></button>
@@ -37,7 +39,7 @@ class Favoritos extends Component{
                     <h2 className="titulo tituloFavs">Selección de películas favoritas</h2>
                         <div className="galeria">{
                             this.state.favoritas.map(
-                                (peliFav, idx) => <Pelis key={peliFav + idx} datosPop={peliFav}/>
+                                (peliFav, idx) => <Pelicula key={peliFav + idx} datosPop={peliFav}/>
                             )
                         }
                         </div>
@@ -45,9 +47,10 @@ class Favoritos extends Component{
                     <button role="boton" id="flecha-derecha" className="flecha-derecha"><i className="icon-angle-right"></i></button>
                 </section>: 
                 <h3 className="loading">Loading...</h3>}
-         */}
+        
                 </React.Fragment>
-            )}
+            )
     }
+}
        
     export default Favoritos

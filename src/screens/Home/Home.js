@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Buscador from "../../components/Buscador/Buscador"
+import Pelicula from "../../components/Pelicula/Pelicula"
+import {Link} from "react-router-dom"
 
 
 class Home extends Component {
@@ -37,12 +39,25 @@ class Home extends Component {
         <Buscador
           history={this.props.history}
         />
+        <h2><Link to='/populars'>Populars Movies</Link></h2>
         {
           this.state.populars.length > 0 ?
             <section>
               {
                 this.state.populars.slice(0, 6).map(
-                // (peli, idx) => <Tarjeta key={peli + idx} datosPeli={peli} />
+                  (pelicula, idx) => <Pelicula key={pelicula + idx} datosPelicula={pelicula} />
+                )
+              }
+            </section> :
+            <h3> Loading...</h3>
+        }
+          <h2><Link to='/topRated'>Top Rated Movies</Link></h2>
+        {
+            this.state.topRated.length > 0 ?
+            <section>
+              {
+                this.state.topRated.slice(0, 6).map(
+                  (pelicula, idx) => <Pelicula key={pelicula + idx} datosPelicula={pelicula} />
                 )
               }
             </section> :
