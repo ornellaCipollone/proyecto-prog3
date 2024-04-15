@@ -53,7 +53,7 @@ class Populars extends Component {
     return (
       <React.Fragment>
         <Filtro
-          filtrarPelis={(valorInput) => this.filtrarPopulares(valorInput)}
+          filtrarPelis={(valorInput) => this.filtrarPopulars(valorInput)}
         />
         {this.state.populars.length > 0 ? (
           this.state.populars.map((pelicula, idx) => (
@@ -69,9 +69,5 @@ class Populars extends Component {
     );
   }
 }
-<<<<<<< HEAD
 
 export default Populars;
-=======
-export default Populars
->>>>>>> c52bbedb41db9dfe2129bee1bcac0489347ebabc
