@@ -20,7 +20,7 @@ class Pelicula extends Component {
     return (
       <>
         <img
-          src={`https://image.tmdb.org/t/p/w500${this.props.datosPeli.poster_path}`}
+          src={`https://image.tmdb.org/t/p/w500${this.props.datosPelicula.poster_path}`}
           alt="imagen"
         />
         <div>
