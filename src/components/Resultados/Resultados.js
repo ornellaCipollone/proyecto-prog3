@@ -29,7 +29,7 @@ class Resultados extends Component {
             <div>
               {this.state.resultados.map((pelicula, idx) => (
                console.log(pelicula)
-               // <Pelicula key={peli + idx} datosPelicula={pelicula}/>
+               // <Pelicula key={pelicula + idx} datosPelicula={pelicula}/>
               ))}
             </div>
           </section>
