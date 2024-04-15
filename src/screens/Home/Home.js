@@ -1,7 +1,9 @@
-import React, { Component } from "react";
-import Buscador from "../../components/Buscador/Buscador";
-import Pelicula from "../../components/Pelicula/Pelicula";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react'
+import Buscador from "../../components/Buscador/Buscador"
+import Pelicula from "../../components/Pelicula/Pelicula"
+import {Link} from "react-router-dom"
+import "./home.css";
+
 
 class Home extends Component {
   constructor() {
