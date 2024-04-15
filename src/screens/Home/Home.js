@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Buscador from "../../components/Buscador/Buscador"
 import Pelicula from "../../components/Pelicula/Pelicula"
 import {Link} from "react-router-dom"
+import "./home.css";
 
 
 class Home extends Component {
@@ -51,7 +52,7 @@ class Home extends Component {
             </section> :
             <h3> Loading...</h3>
         }
-          <h2><Link to='/topRated'>Top Rated Movies</Link></h2>
+          <h2><Link to='/toprated'>Top Rated Movies</Link></h2>
         {
             this.state.topRated.length > 0 ?
             <section>
