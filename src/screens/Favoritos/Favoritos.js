@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 
 class Favoritos extends Component{
-    constructor(props){
+    /* constructor(props){
         super(props);
         this.state = {
             favoritas: []
@@ -25,11 +25,11 @@ class Favoritos extends Component{
 
             }
         }
-        render(){
+     */    render(){
             console.log(this.state);
             return(
                 <React.Fragment>
-                {
+                {/* {
                     this.state.favoritas.length > 0 ?
                 <section className="contenedor">
                     <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i className="icon-angle-left"></i></button>
@@ -45,7 +45,7 @@ class Favoritos extends Component{
                     <button role="boton" id="flecha-derecha" className="flecha-derecha"><i className="icon-angle-right"></i></button>
                 </section>: 
                 <h3 className="loading">Loading...</h3>}
-        
+         */}
                 </React.Fragment>
             )}
     }

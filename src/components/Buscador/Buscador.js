@@ -1,30 +1,35 @@
-import React, { Component } from 'react'
-import {Link} from 'react-router-dom';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
- class Buscador extends Component {
-  
-  constructor(props){
+class Buscador extends Component {
+  constructor(props) {
     super(props);
-    this.state={
-        busqueda: ""
-    }
+    this.state = {
+      valorInput: "",
+    };
   }
-  evitarSubmit(event){
+  evitarSubmit(event) {
     event.preventDefault();
-    this.props.history.push(`/resultados/${this.state.busqueda}`)
+    this.props.history.push(`/resultados/${this.state.valorInput}`);
   }
-controlarCambios(event){
-    this.setState({busqueda: event.target.value});
-}
-    render() {
+  capturarValor(event) {
+    this.setState({ valorInput: event.target.value });
+  }
+  render() {
     return (
       <div>
-        <form onSubmit={(event)=>this.evitarSubmit(event)}>
-            <input type='text' name='buscador' placeholder='Buscar...' onChange={(event)=>this.controlarCambios(event)} value={this.state.busqueda}/>
-            <input type='submit' value="Submit"/>
+        <form onSubmit={(event) => this.evitarSubmit(event)}>
+          <input
+            type="text"
+            name="buscador"
+            placeholder="Buscar..."
+            onChange={(event) => this.capturarValor(event)}
+            value={this.state.valorInput}
+          />
+          <input type="submit" value="Submit" />
         </form>
       </div>
-    )
+    );
   }
 }
-export default Buscador
+export default Buscador;
