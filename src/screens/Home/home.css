@@ -1,0 +1,43 @@
+/* home.css */
+
+/* Estilo para el contenedor principal */
+.home-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilo para los enlaces */
+  .home-link {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* Estilo para las secciones de películas */
+  .movie-section {
+    margin-bottom: 30px;
+  }
+  
+  /* Estilo para las tarjetas de películas */
+  .movie-card {
+    display: inline-block;
+    width: 30%;
+    margin-right: 2%;
+    margin-bottom: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  /* Estilo para la imagen de la película */
+  .movie-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Estilo para el título de la película */
+  .movie-title {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+  }
