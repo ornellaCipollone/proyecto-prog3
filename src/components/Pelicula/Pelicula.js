@@ -20,14 +20,14 @@ class Pelicula extends Component {
     return (
       <>
         <img
-          src={`https://image.tmdb.org/t/p/w500${this.props.datosPeli.poster_path}`}
+          src={`https://image.tmdb.org/t/p/w500${this.props.datosPelicula.poster_path}`}
           alt="imagen"
         />
         <div>
           <h4>{this.props.datosPelicula.title}</h4>
           <p>{this.props.datosPelicula.release_date} </p>
           <button onClick={()=> this.handleMostrar()}> 
-            {this.state.mostrar? 'Ver menos' : 'Ver más'}
+            {this.state.mostrar ? 'Ver menos' : 'Ver más'}
           </button>
           <Link to={`/detail/id/${this.props.datosPelicula.id}`}>
             Ir a Detalle
