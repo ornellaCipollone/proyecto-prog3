@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Filtro from "../../components/Filtro/Filtro";
+import Pelicula from "../../components/Pelicula/Pelicula"
+import Loader from "../../components/Loader/Loader"
 
 class TopRated extends Component {
   constructor() {
@@ -58,7 +60,7 @@ class TopRated extends Component {
             <Pelicula key={pelicula + idx} datosPelicula={pelicula} />
           ))
         ) : (
-          <h3> Loading...</h3>
+          <Loader/>
         )}
         <button onClick={() => this.traerMas(this.state.topRated)}>
           Ver más
