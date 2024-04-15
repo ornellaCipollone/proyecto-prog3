@@ -65,7 +65,7 @@ class Pelicula extends Component {
 				<p className="fechas">{this.props.datosUp}</p>
           <p>Fecha de estreno: {this.props.datosPelicula.release_date} </p>
           <button onClick={()=> this.handleMostrar()}> 
-            {this.state.mostrar? 'Ver menos' : 'Ver más'}
+            {this.state.mostrar ? 'Ver menos' : 'Ver más'}
           </button>
           <Link to={`/detail/id/${this.props.datosPelicula.id}`}>
             Ir a Detalle
