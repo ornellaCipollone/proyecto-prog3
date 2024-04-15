@@ -6,10 +6,11 @@ class Pelicula extends Component {
     super(props);
     this.state = {
         mostrar: false,
-        descripcion: props.datosPelicula.overview,
+        descripcion: this.props.datosPelicula.overview,
         textoBoton: "Agregar a favoritos"
 
     };
+    console.log(this.props);
   }
  
   handleMostrar(){
@@ -32,7 +33,7 @@ class Pelicula extends Component {
 
         
         this.setState({
-            textoBoton : "Agrear a favoritos"
+            textoBoton : "Agregar a favoritos"
         })
 
     } else {
@@ -49,6 +50,7 @@ class Pelicula extends Component {
     localStorage.setItem ("favoritos", favoritostoString);
  } 
   render() {
+    
     console.log(this.props);
     return (
       <>
