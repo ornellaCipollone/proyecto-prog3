@@ -69,9 +69,5 @@ class Populars extends Component {
     );
   }
 }
-<<<<<<< HEAD
 
 export default Populars;
-=======
-export default Populars
->>>>>>> c52bbedb41db9dfe2129bee1bcac0489347ebabc

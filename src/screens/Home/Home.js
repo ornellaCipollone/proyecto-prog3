@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Buscador from "../../components/Buscador/Buscador"
 import Pelicula from "../../components/Pelicula/Pelicula"
+import Loader from '../../components/Loader/Loader'
 import {Link} from "react-router-dom"
 import "./home.css";
 
@@ -56,7 +57,7 @@ class Home extends Component {
             ))}
           </section>
         ) : (
-          <h3> Loading...</h3>
+          <Loader/>
         )}
         <h2>
           <Link to="/toprated">Top Rated Movies</Link>
@@ -68,7 +69,7 @@ class Home extends Component {
             ))}
           </section>
         ) : (
-          <h3> Loading...</h3>
+          <Loader/>
         )}
       </React.Fragment>
     );
