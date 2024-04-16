@@ -1,0 +1,107 @@
+/* Estilos para las tarjetas de películas en el componente Pelicula */
+.movie-card {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    /* Efecto de elevación al pasar el ratón */
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.movie-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    height: 25px;
+}
+
+.movie-overview {
+    font-size: 14px;
+    /* Tamaño del resumen */
+    line-height: 1.4;
+}
+
+/* Estilos para los enlaces */
+  
+.link-detalle {
+    bottom: 10px; 
+    color: #e50914; /* Color del enlace */
+    text-decoration: none;
+    margin-top: 15px;
+  }
+
+.link-detalle:hover {
+    text-decoration: underline;
+}
+
+.fav-btn {
+    background-color: #e50914;
+    /* Rojo Netflix */
+    color: #fff;
+    /* Texto blanco */
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    /* Espacio entre el texto y el botón */
+    font-size: 14px;
+    /* Tamaño del texto */
+    transition: background-color 0.3s ease;
+    /* Transición suave del color de fondo */
+}
+
+
+.boton:hover {
+    background-color: #b20710;
+    /* Cambio de color al pasar el ratón */
+}
+
+.ver-mas-btn {
+    background-color: transparent;
+    /* Fondo transparente */
+    color: #e50914;
+    /* Rojo Netflix */
+    border: 2px solid #e50914;
+    /* Borde rojo */
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 0px;
+    /* Espacio entre el texto y el botón */
+    font-size: 14px;
+    /* Tamaño del texto */
+    transition: color 0.3s ease, border-color 0.3s ease;
+    /* Transición suave del color y el borde */
+}
+
+.ver-mas-btn:hover {
+    color: #fff;
+    /* Texto blanco al pasar el ratón */
+    border-color: #b20710;
+    /* Borde rojo al pasar el ratón */
+    background-color: #b20710;
+    /* Cambio de color al pasar el ratón */
+}

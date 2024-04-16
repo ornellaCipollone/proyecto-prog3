@@ -1,0 +1,12 @@
+/* Estilos para el componente TopRated */
+.toprated-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    padding: 20px; 
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #000;
+  }
+
+  

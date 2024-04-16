@@ -1,81 +1,91 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "./pelicula.css";
 
 class Pelicula extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        mostrar: false,
-        descripcion: this.props.datosPelicula.overview,
-        textoBoton: "Agregar a favoritos"
-
+      mostrar: false,
+      descripcion: this.props.datosPelicula.overview,
+      textoBoton: "Agregar a favoritos",
     };
     console.log(this.props);
   }
- 
-  handleMostrar(){
+
+  handleMostrar() {
     this.setState({
-        mostrar: !this.state.mostrar
-    })
+      mostrar: !this.state.mostrar,
+    });
   }
 
-  agregarYSacarDeFavs(id){ //metodo
-    //Guardar un id en un array y luego en localStorage
+  agregarYSacarDeFavs(id) {
     let favoritos = [];
-    let recuperoStorage = localStorage.getItem('favoritos');
+    let recuperoStorage = localStorage.getItem("favoritos");
 
-    if (recuperoStorage !== null){
-        favoritos = JSON.parse(recuperoStorage);
+    if (recuperoStorage !== null) {
+      favoritos = JSON.parse(recuperoStorage);
     }
 
-    if(favoritos.includes(id)){
-        favoritos = favoritos.filter( unId => unId !== id)
+    if (favoritos.includes(id)) {
+      favoritos = favoritos.filter((unId) => unId !== id);
 
-        
-        this.setState({
-            textoBoton : "Agregar a favoritos"
-        })
-
+      this.setState({
+        textoBoton: "Agregar a favoritos",
+      });
     } else {
-      
-        favoritos.push(id);
+      favoritos.push(id);
 
-        this.setState({
-            textoBoton: "Quitar de favoritos",
-        })
-
+      this.setState({
+        textoBoton: "Quitar de favoritos",
+      });
     }
 
-    let favoritostoString= JSON.stringify(favoritos);
-    localStorage.setItem ("favoritos", favoritostoString);
- } 
+    let favoritostoString = JSON.stringify(favoritos);
+    localStorage.setItem("favoritos", favoritostoString);
+  }
+
   render() {
-    
     console.log(this.props);
     return (
-      <>
+      <div className="movie-card">
         <img
           src={`https://image.tmdb.org/t/p/w500${this.props.datosPelicula.poster_path}`}
           alt="imagen"
         />
-        <div>
+        <div className="movie-info">
           
-          <h4>{this.props.datosPelicula.title}</h4>
-
-          <button onClick={()=> this.agregarYSacarDeFavs(this.props.datosPelicula.id)} type="button" className="boton"> {this.state.textoBoton}  </button>
-
-				<p className="fechas">{this.props.datosUp}</p>
-          <p>Fecha de estreno: {this.props.datosPelicula.release_date} </p>
-          <button onClick={()=> this.handleMostrar()}> 
-            {this.state.mostrar ? 'Ver menos' : 'Ver más'}
+          <h4 className="movie-title">{this.props.datosPelicula.title}</h4>
+          
+          <button
+            onClick={() =>
+              this.agregarYSacarDeFavs(this.props.datosPelicula.id)
+            }
+            type="button"
+            className="fav-btn"
+          >
+            {this.state.textoBoton}
           </button>
-          <Link to={`/detail/id/${this.props.datosPelicula.id}`}>
-            Ir a Detalle
-          </Link>
+
+          <p className="movie-overview">
+            {this.state.mostrar ? this.state.descripcion : ""}{" "}
+          </p>
+          
+          <button className="ver-mas-btn" onClick={() => this.handleMostrar()}>
+            {this.state.mostrar ? "Ver menos" : "Ver más"}
+          </button>
+          
+            <Link
+              to={`/detail/id/${this.props.datosPelicula.id}`}
+              className="link-detalle"
+            >
+              Ir a Detalle
+            </Link>
+          
         </div>
-      </>
+      </div>
     );
   }
 }
 
-export default Pelicula
+export default Pelicula;

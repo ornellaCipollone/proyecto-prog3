@@ -1,10 +1,9 @@
-import React, { Component } from 'react'
-import Buscador from "../../components/Buscador/Buscador"
-import Pelicula from "../../components/Pelicula/Pelicula"
-import Loader from '../../components/Loader/Loader'
-import {Link} from "react-router-dom"
+import React, { Component } from "react";
+import Buscador from "../../components/Buscador/Buscador";
+import Pelicula from "../../components/Pelicula/Pelicula";
+import Loader from "../../components/Loader/Loader";
+import { Link } from "react-router-dom";
 import "./home.css";
-
 
 class Home extends Component {
   constructor() {
@@ -44,34 +43,39 @@ class Home extends Component {
     console.log(this.setState.populars);
     console.log(this.setState.topRated);
     return (
-      <React.Fragment className="home-container">
+      <div className="home-container">
         <Buscador history={this.props.history} />
 
+        <h2>
+          <Link to="/populars" className="home-link">
+            Populars Movies
+          </Link>
+        </h2>
         {this.state.populars.length > 0 ? (
-          <section c> 
-            <h2>
-              <Link to="/populars" className="home-link">Populars Movies</Link>
-            </h2>
+          <section className="movie-row">
             {this.state.populars.slice(0, 6).map((pelicula, idx) => (
-              <Pelicula key={pelicula + idx} datosPelicula={pelicula} className="movie-card" />
+              <Pelicula key={pelicula + idx} datosPelicula={pelicula} />
             ))}
           </section>
         ) : (
-          <Loader/>
+          <Loader />
         )}
+
         <h2>
-          <Link to="/toprated">Top Rated Movies</Link>
+          <Link to="/toprated" className="home-link">
+            Top Rated Movies
+          </Link>
         </h2>
         {this.state.topRated.length > 0 ? (
-          <section className="movie-section">
+          <section className="movie-row">
             {this.state.topRated.slice(0, 6).map((pelicula, idx) => (
-              <Pelicula key={pelicula + idx} datosPelicula={pelicula} className="movie-card" />
+              <Pelicula key={pelicula + idx} datosPelicula={pelicula} />
             ))}
           </section>
         ) : (
-          <Loader/>
+          <Loader />
         )}
-      </React.Fragment>
+      </div>
     );
   }
 }

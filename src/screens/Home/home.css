@@ -1,43 +1,43 @@
-/* home.css */
-
-/* Estilo para el contenedor principal */
+/* Estilos generales */
 .home-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Estilo para los enlaces */
-  .home-link {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  /* Estilo para las secciones de películas */
-  .movie-section {
-    margin-bottom: 30px;
-  }
-  
-  /* Estilo para las tarjetas de películas */
-  .movie-card {
-    display: inline-block;
-    width: 30%;
-    margin-right: 2%;
-    margin-bottom: 20px;
-    background-color: #f4f4f4;
-    border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 50px;
+}
+
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.movie-row {
+  display: flex;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+
+/* Estilos para los enlaces */
+.home-link {
+  color: #e50914;
+  /* Rojo Netflix */
+  text-decoration: none;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .home-container {
     padding: 10px;
   }
-  
-  /* Estilo para la imagen de la película */
-  .movie-image {
-    width: 100%;
-    height: auto;
+  .movie-card {
+    width: 180px;
+    margin-right: 10px;
   }
-  
-  /* Estilo para el título de la película */
-  .movie-title {
-    font-size: 18px;
-    margin-top: 10px;
-    color: #333;
-  }
+}

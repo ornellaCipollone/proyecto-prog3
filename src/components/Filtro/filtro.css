@@ -1,0 +1,38 @@
+/* Estilos para el componente Filtro */
+.filtro-container {
+    margin-bottom: 20px; /* Espacio inferior */
+  }
+  
+  .filtro-form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .filtro-input {
+    flex: 1; /* El input toma todo el espacio restante */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .filtro-input:focus {
+    outline: none;
+    border-color: #007bff; /* Color del borde al estar enfocado */
+  }
+  
+  .filtro-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-left: 8px; /* Espacio entre el input y el botón */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filtro-btn:hover {
+    background-color: #0056b3; /* Color del botón al pasar el ratón */
+  }

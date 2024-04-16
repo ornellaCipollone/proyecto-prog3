@@ -1,0 +1,33 @@
+/* Reset de estilos */
+* {
+    box-sizing: border-box;
+    
+  }
+  
+  /* Configuración general */
+  body {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* Estilos para enlaces */
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos para encabezados */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  
+  
+  

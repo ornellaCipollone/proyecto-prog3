@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Filtro from "../../components/Filtro/Filtro";
-import Pelicula from "../../components/Pelicula/Pelicula"
-import Loader from "../../components/Loader/Loader"
+import Pelicula from "../../components/Pelicula/Pelicula";
+import Loader from "../../components/Loader/Loader";
+import "./populars.css"
 
 class Populars extends Component {
   constructor() {
@@ -53,16 +54,18 @@ class Populars extends Component {
     return (
       <React.Fragment>
         <Filtro
-          filtrarPelis={(valorInput) => this.filtrarPopulares(valorInput)}
+          filtrarPelis={(valorInput) => this.filtrarPopulars(valorInput)}
         />
-        {this.state.populars.length > 0 ? (
-          this.state.populars.map((pelicula, idx) => (
-            <Pelicula key={pelicula + idx} datosPelicula={pelicula} />
-          ))
-        ) : (
-          <Loader/>
-        )}
-        <button onClick={() => this.traerMas(this.state.populars)}>
+        <div className="populars-container">
+          {this.state.populars.length > 0 ? (
+            this.state.populars.map((pelicula, idx) => (
+              <Pelicula key={pelicula + idx} datosPelicula={pelicula} />
+            ))
+          ) : (
+            <Loader />
+          )}
+        </div>
+        <button className="ver-mas-btn" onClick={() => this.traerMas(this.state.populars)}>
           Ver más
         </button>
       </React.Fragment>

@@ -1,0 +1,32 @@
+/* Estilos para el componente Buscador */
+.buscador-container {
+    margin-bottom: 20px; 
+  }
+  
+  .buscador-form {
+    display: flex; 
+  }
+  
+  .buscador-input {
+    width: 300px; 
+    padding: 8px; 
+    border: none; 
+    border-radius: 20px; 
+    font-size: 16px; 
+  }
+  
+  .buscador-submit {
+    background-color: #e50914; 
+    color: #fff; 
+    border: none; 
+    padding: 8px 16px; 
+    border-radius: 20px;
+    font-size: 16px; 
+    cursor: pointer; 
+    margin-left: 10px; 
+  }
+  
+  .buscador-submit:hover {
+    background-color: #b20710; 
+  }
+  

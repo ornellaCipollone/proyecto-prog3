@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Pelicula from "../../components/Pelicula/Pelicula"
-import Loader from "../../components/Loader/Loader"
-
+import Pelicula from "../../components/Pelicula/Pelicula";
+import Loader from "../../components/Loader/Loader";
+import "./resultados.css";
 
 class Resultados extends Component {
   constructor() {
@@ -26,18 +26,16 @@ class Resultados extends Component {
   render() {
     return (
       <React.Fragment>
-        {this.state.resultados.length > 0 ? (
-          <section>
-            <h2>Resultados de Peliculas</h2>
-            <div>
-              {this.state.resultados.map((pelicula, idx) => (
-                <Pelicula key={pelicula + idx} datosPelicula={pelicula} />
-              ))}
-            </div>
-          </section>
-        ) : (
-          <Loader/>
-        )}
+        <h2>Resultados de Peliculas</h2>
+        <div className="resultados-container">
+          {this.state.resultados.length > 0 ? (
+            this.state.resultados.map((pelicula, idx) => (
+              <Pelicula key={pelicula + idx} datosPelicula={pelicula} />
+            ))
+          ) : (
+            <Loader />
+          )}
+        </div>
       </React.Fragment>
     );
   }

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Filtro from "../../components/Filtro/Filtro";
-import Pelicula from "../../components/Pelicula/Pelicula"
-import Loader from "../../components/Loader/Loader"
+import Pelicula from "../../components/Pelicula/Pelicula";
+import Loader from "../../components/Loader/Loader";
+import "./topRated.css";
 
 class TopRated extends Component {
   constructor() {
@@ -55,14 +56,16 @@ class TopRated extends Component {
         <Filtro
           filtrarPelis={(valorInput) => this.filtrarTopRated(valorInput)}
         />
-        {this.state.topRated.length > 0 ? (
-          this.state.topRated.map((pelicula, idx) => (
-            <Pelicula key={pelicula + idx} datosPelicula={pelicula} />
-          ))
-        ) : (
-          <Loader/>
-        )}
-        <button onClick={() => this.traerMas(this.state.topRated)}>
+        <div className="toprated-container">
+          {this.state.topRated.length > 0 ? (
+            this.state.topRated.map((pelicula, idx) => (
+              <Pelicula key={pelicula + idx} datosPelicula={pelicula} />
+            ))
+          ) : (
+            <Loader />
+          )}
+        </div>
+        <button className="ver-mas-btn" onClick={() => this.traerMas(this.state.topRated)}>
           Ver más
         </button>
       </React.Fragment>
