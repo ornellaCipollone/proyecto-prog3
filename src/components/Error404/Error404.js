@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./error404.css";
+import  "./error404.css";
 
 
 class Error404 extends Component {
