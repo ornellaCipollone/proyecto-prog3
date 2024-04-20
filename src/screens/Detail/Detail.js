@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import PeliculaDetalle from '../../components/PeliculaDetalle/PeliculaDetalle'
+import "./detail.css"
 
 class Detail extends Component {
     constructor(){

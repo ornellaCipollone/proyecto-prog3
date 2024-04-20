@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import Pelicula from "../../components/Pelicula/Pelicula";
+import "./favoritos.css"
 
 class Favoritos extends Component{
      constructor(props){

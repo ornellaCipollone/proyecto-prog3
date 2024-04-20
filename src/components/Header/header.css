@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .logo {
+    max-width: 100px;
+  }
+  
+  .inicio ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .inicio ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .inicio ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .header-link {
+    color: red;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .header-link:hover {
+    text-decoration: underline;
+  }
+  
