@@ -5,7 +5,7 @@ import "./header.css"
 function Header(props){
     return(
     <header className="header">
-        <img src="/logo.png" className="logo" alt="logo"></img>
+        <img src="./img/images.png" className="logo" alt="logo"></img>
         <nav className="inicio">
             <ul className="inicio">
             <li> <Link to ="/" className= "header-link">Home</Link></li>

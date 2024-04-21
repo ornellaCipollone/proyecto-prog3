@@ -1,27 +1,18 @@
-.contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .tituloFavs {
-    margin-bottom: 20px;
-  }
-  .galeria{
-      
-  }
-  .contenedor-peliculas {
-    width: 100%;
-    overflow-x: auto; /* Agregamos desplazamiento horizontal si el contenido es demasiado ancho */
-    white-space: nowrap; /* Evita que el contenido se rompa en varias líneas */
-  }
-  
-  .pelicula {
-    display: inline-block; /* Muestra cada película en línea */
-    margin-right: 20px; /* Añade espacio entre cada película */
-  }
-  
-  .loading {
-    color: red;
-  }
-  
+.tituloFavs {
+  margin-bottom: 20px;
+}
+
+.contenedor-peliculas {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.galeria {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

@@ -8,7 +8,7 @@ class Pelicula extends Component {
     this.state = {
       mostrar: false,
       descripcion: this.props.datosPelicula.overview,
-      textoBoton: "Agregar a favoritos",
+      textoBoton: "Agregar a Favoritos",
     };
     console.log(this.props);
   }
