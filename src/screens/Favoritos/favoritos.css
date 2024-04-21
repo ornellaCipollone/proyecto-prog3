@@ -7,7 +7,9 @@
   .tituloFavs {
     margin-bottom: 20px;
   }
-  
+  .galeria{
+      
+  }
   .contenedor-peliculas {
     width: 100%;
     overflow-x: auto; /* Agregamos desplazamiento horizontal si el contenido es demasiado ancho */
