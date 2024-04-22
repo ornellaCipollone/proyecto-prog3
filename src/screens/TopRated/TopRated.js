@@ -29,7 +29,7 @@ class TopRated extends Component {
 
   filtrarTopRated(filtro) {
     let peliculasFiltradas = this.state.topRated.filter((pelicula) =>
-      pelicula.title.includes(filtro)
+      pelicula.title.toLowerCase().includes(filtro.toLowerCase())
     );
     this.setState({
       topRated: peliculasFiltradas,

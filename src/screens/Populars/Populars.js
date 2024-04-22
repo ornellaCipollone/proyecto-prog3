@@ -29,7 +29,7 @@ class Populars extends Component {
 
   filtrarPopulars(filtro) {
     let peliculasFiltradas = this.state.populars.filter((pelicula) =>
-      pelicula.title.includes(filtro)
+      pelicula.title.toLowerCase().includes(filtro.toLowerCase())
     );
     this.setState({
       populars: peliculasFiltradas,
