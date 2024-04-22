@@ -1,0 +1,33 @@
+.sub-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc; /* Línea divisoria */
+  }
+  
+  .imagen {
+    width: 300px; /* Tamaño de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-right: 20px; /* Espaciado a la derecha */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  .letras {
+    flex: 1; /* Que ocupe el espacio restante */
+  }
+  
+  .titulo {
+    font-size: 20px; /* Tamaño del título */
+    margin-bottom: 10px; /* Espaciado inferior */
+  }
+  
+  .titulos {
+    font-weight: bold; /* Texto en negrita */
+  }
+  
+  .espacio {
+    margin-bottom: 5px; /* Espaciado inferior */
+  }
+  
+
